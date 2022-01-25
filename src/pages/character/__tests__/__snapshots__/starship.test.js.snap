@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Starship /> should match snapshot 1`] = `
+.c1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #4bd5ee;
+}
+
+.c0 {
+  background-color: white;
+  border-radius: 0px 5px 5px 0px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div>
+  <div
+    class="row"
+    style="margin: 10px 0px 0px 0px; height: 70px;"
+  >
+    <div
+      class="col-md-3"
+      style="padding-right: 0px;"
+    >
+      <img
+        class=""
+        src="test imageSrc"
+        style="height: 100%; object-fit: cover; width: 100%; border-radius: 5px 0px 0px 5px;"
+      />
+    </div>
+    <div
+      class="col"
+      style="padding-left: 0px;"
+    >
+      <div
+        class="c0"
+      >
+        <h1
+          class="c1"
+        >
+          testname
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;

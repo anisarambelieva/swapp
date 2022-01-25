@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharacterCard /> should match snapshot 1`] = `
+<div>
+  <div
+    style="background-color: white; padding: 10px 30px; margin-left: 15px; border-radius: 5px;"
+  >
+    <h4
+      style="text-align: center; color: rgb(75, 213, 238); font-weight: bold;"
+    >
+      testname
+    </h4>
+    <img
+      class=""
+      src="test imageSrc"
+      style="height: 300px; object-fit: cover; width: 100%; margin-bottom: 5px;"
+    />
+    <p
+      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+    >
+      Height
+      : 
+      <span
+        style="color: rgb(75, 213, 238);"
+      >
+        test height
+      </span>
+    </p>
+    <p
+      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+    >
+      Weight
+      : 
+      <span
+        style="color: rgb(75, 213, 238);"
+      >
+        test weight
+      </span>
+    </p>
+    <p
+      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+    >
+      Species
+      : 
+      <span
+        style="color: rgb(75, 213, 238);"
+      >
+        test species
+      </span>
+    </p>
+    <p
+      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+    >
+      Home World
+      : 
+      <span
+        style="color: rgb(75, 213, 238);"
+      >
+        test home world
+      </span>
+    </p>
+  </div>
+</div>
+`;
