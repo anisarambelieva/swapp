@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EpisodeHeader /> should match snapshot 1`] = `
+.c0 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #4bd5ee;
+}
+
+.c1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #4e5b6e;
+}
+
+<div>
+  <div
+    style="background-color: white; height: 100%; padding-left: 50px; padding-top: 55px; border-radius: 0px 5px 5px 0px;"
+  >
+    <h1
+      class="c0"
+    >
+      Title test
+    </h1>
+    <h2
+      class="c1"
+    >
+      Subtitle test
+    </h2>
+  </div>
+</div>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StyledButton /> should match snapshot 1`] = `
+.c0 {
+  font-weight: bold;
+  border: 0;
+}
+
+<div>
+  <button
+    class="c0 btn btn-primary"
+    type="button"
+  >
+    Click me
+  </button>
+</div>
+`;
