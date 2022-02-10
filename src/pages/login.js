@@ -33,8 +33,8 @@ const FormCol = styled(Col)`
 `;
 
 const Login = () => {
-  const [email, setEmail] = useState('admin@swapp.com');
-  const [password, setPassword] = useState('Sw@pp@adm!n');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const SIGNIN_MUTATION = gql`
     mutation SignInMutation($email: String!, $password: String!) {
