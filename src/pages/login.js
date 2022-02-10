@@ -54,6 +54,14 @@ const Login = () => {
     },
   });
 
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  }
+
   return (
     <BlackBox $width="600px">
       <Row>
@@ -66,13 +74,13 @@ const Login = () => {
         <Col>
           <FormRow>
             <FormCol md={{ span: 8, offset: 2 }}>
-              <FormControl placeholder="username" />
+              <FormControl placeholder="username" onChange={handleEmailChange} />
             </FormCol>
           </FormRow>
 
           <FormRow>
             <FormCol md={{ span: 8, offset: 2 }}>
-              <FormControl placeholder="password" />
+              <FormControl placeholder="password" onChange={handlePasswordChange} />
             </FormCol>
           </FormRow>
 
