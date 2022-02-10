@@ -4,6 +4,7 @@ import { gql, useMutation } from "@apollo/client";
 
 import Button from '../components/button.js';
 import Logo from '../components/logo.js';
+import { useState } from 'react';
 
 const BlackBox = styled(Container)`
   background-color: black;
@@ -32,6 +33,9 @@ const FormCol = styled(Col)`
 `;
 
 const Login = () => {
+  const [email, setEmail] = useState('admin@swapp.com');
+  const [password, setPassword] = useState('Sw@pp@adm!n');
+
   const SIGNIN_MUTATION = gql`
     mutation SignInMutation($email: String!, $password: String!) {
       signIn(email: $email, password: $password) {
@@ -42,8 +46,8 @@ const Login = () => {
 
   const [signIn] = useMutation(SIGNIN_MUTATION, {
     variables: {
-      email: "admin@swapp.com",
-      password: "Sw@pp@adm!n",
+      email: email,
+      password: password,
     },
     onCompleted: ({ signIn }) => {
       localStorage.setItem('auth-token', signIn.token);
