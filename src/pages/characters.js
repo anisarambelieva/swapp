@@ -1,7 +1,11 @@
+import { Container } from "react-bootstrap";
+import Header from "../components/header";
+
 const Characters = () => (
-  <div className="Characters">
-    <p>Characters Page</p>
-  </div>
+  <Container>
+    <Header />
+
+  </Container>
 );
 
 export default Characters;
