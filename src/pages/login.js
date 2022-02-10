@@ -1,5 +1,6 @@
 import { Col, Container, FormControl, Row } from 'react-bootstrap';
 import styled from 'styled-components';
+import { gql, useMutation } from "@apollo/client";
 
 import Button from '../components/button.js';
 import Logo from '../components/logo.js';
@@ -30,38 +31,62 @@ const FormCol = styled(Col)`
   justify-content: ${({ $justifyContent = 'center' }) => $justifyContent};
 `;
 
-const Login = () => (
-  <BlackBox $width="600px">
-    <Row>
-      <FormCol md={{ span: 8, offset: 2 }}>
-        <Logo $fontSize="90px">SWAPP</Logo>
-      </FormCol>
-    </Row>
+const Login = () => {
+  const SIGNIN_MUTATION = gql`
+    mutation SignInMutation($email: String!, $password: String!) {
+      signIn(email: $email, password: $password) {
+        token
+      }
+    }
+  `;
 
-    <WhiteBox>
-      <Col>
-        <FormRow>
-          <FormCol md={{ span: 8, offset: 2 }}>
-            <FormControl placeholder="username" />
-          </FormCol>
-        </FormRow>
+  const [signIn] = useMutation(SIGNIN_MUTATION, {
+    variables: {
+      email: "admin@swapp.com",
+      password: "Sw@pp@adm!n",
+    },
+    onCompleted: ({ signIn }) => {
+      console.log(signIn.token);
+    },
+  });
 
-        <FormRow>
-          <FormCol md={{ span: 8, offset: 2 }}>
-            <FormControl placeholder="password" />
-          </FormCol>
-        </FormRow>
+  return (
+    <BlackBox $width="600px">
+      <Row>
+        <FormCol md={{ span: 8, offset: 2 }}>
+          <Logo $fontSize="90px">SWAPP</Logo>
+        </FormCol>
+      </Row>
 
-        <FormRow>
-          <FormCol $justifyContent="right" md={{ span: 2, offset: 8 }}>
-            <Button $color="#ffe300" $backgroundColor="black">
-              Login
-            </Button>
-          </FormCol>
-        </FormRow>
-      </Col>
-    </WhiteBox>
-  </BlackBox>
-);
+      <WhiteBox>
+        <Col>
+          <FormRow>
+            <FormCol md={{ span: 8, offset: 2 }}>
+              <FormControl placeholder="username" />
+            </FormCol>
+          </FormRow>
+
+          <FormRow>
+            <FormCol md={{ span: 8, offset: 2 }}>
+              <FormControl placeholder="password" />
+            </FormCol>
+          </FormRow>
+
+          <FormRow>
+            <FormCol $justifyContent="right" md={{ span: 2, offset: 8 }}>
+              <Button
+                $color="#ffe300"
+                $backgroundColor="black"
+                onClick={signIn}
+              >
+                Login
+              </Button>
+            </FormCol>
+          </FormRow>
+        </Col>
+      </WhiteBox>
+    </BlackBox>
+  );
+};
 
 export default Login;
