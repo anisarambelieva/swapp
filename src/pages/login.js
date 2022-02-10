@@ -46,7 +46,7 @@ const Login = () => {
       password: "Sw@pp@adm!n",
     },
     onCompleted: ({ signIn }) => {
-      console.log(signIn.token);
+      localStorage.setItem('auth-token', signIn.token);
     },
   });
 
