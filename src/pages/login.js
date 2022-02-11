@@ -1,11 +1,11 @@
-import { Col, Container, FormControl, Row } from 'react-bootstrap';
-import styled from 'styled-components';
 import { gql, useMutation } from "@apollo/client";
-
-import Button from '../components/button.js';
-import Logo from '../components/logo.js';
-import { useState } from 'react';
+import { useState } from "react";
+import { Col, Container, FormControl, Row } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
+import styled from "styled-components";
+
+import Button from "../components/button.js";
+import Logo from "../components/logo.js";
 
 const BlackBox = styled(Container)`
   background-color: black;
@@ -30,12 +30,12 @@ const FormRow = styled(Row)`
 
 const FormCol = styled(Col)`
   display: flex;
-  justify-content: ${({ $justifyContent = 'center' }) => $justifyContent};
+  justify-content: ${({ $justifyContent = "center" }) => $justifyContent};
 `;
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
 
   const SIGNIN_MUTATION = gql`
@@ -52,18 +52,18 @@ const Login = () => {
       password: password,
     },
     onCompleted: ({ signIn }) => {
-      localStorage.setItem('auth-token', signIn.token);
+      localStorage.setItem("auth-token", signIn.token);
       setAuthenticated(true);
     },
   });
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-  }
+  };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-  }
+  };
 
   return authenticated ? (
     <Redirect push to="/episodes" />
@@ -79,13 +79,19 @@ const Login = () => {
         <Col>
           <FormRow>
             <FormCol md={{ span: 8, offset: 2 }}>
-              <FormControl placeholder="username" onChange={handleEmailChange} />
+              <FormControl
+                placeholder="username"
+                onChange={handleEmailChange}
+              />
             </FormCol>
           </FormRow>
 
           <FormRow>
             <FormCol md={{ span: 8, offset: 2 }}>
-              <FormControl placeholder="password" onChange={handlePasswordChange} />
+              <FormControl
+                placeholder="password"
+                onChange={handlePasswordChange}
+              />
             </FormCol>
           </FormRow>
 

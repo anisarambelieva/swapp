@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const EpisodeTitle = styled.h1`
   font-size: 30px;
@@ -15,11 +15,11 @@ const EpisodeSubtitle = styled.h2`
 const EpisodeHeader = ({ title, subtitle }) => (
   <div
     style={{
-      backgroundColor: 'white',
-      height: '100%',
-      paddingLeft: '50px',
-      paddingTop: '55px',
-      borderRadius: '0px 5px 5px 0px',
+      backgroundColor: "white",
+      height: "100%",
+      paddingLeft: "50px",
+      paddingTop: "55px",
+      borderRadius: "0px 5px 5px 0px",
     }}
   >
     <EpisodeTitle>{title}</EpisodeTitle>

@@ -1,5 +1,5 @@
-import { Col, Row, Image } from 'react-bootstrap';
-import styled from 'styled-components';
+import { Col, Row, Image } from "react-bootstrap";
+import styled from "styled-components";
 
 const Name = styled.h1`
   font-size: 20px;
@@ -18,14 +18,14 @@ const NameContainer = styled.div`
 `;
 
 const Starship = ({ imageSrc, name }) => (
-  <Row style={{ margin: '10px 0px 0px 0px', height: '70px' }}>
-    <Col md="3" style={{ paddingRight: '0' }}>
+  <Row style={{ margin: "10px 0px 0px 0px", height: "70px" }}>
+    <Col md="3" style={{ paddingRight: "0" }}>
       <Image
         style={{
-          height: '100%',
-          objectFit: 'cover',
-          width: '100%',
-          borderRadius: '5px 0px 0px 5px',
+          height: "100%",
+          objectFit: "cover",
+          width: "100%",
+          borderRadius: "5px 0px 0px 5px",
         }}
         src={imageSrc}
       />

@@ -1,8 +1,8 @@
-import { Col, Row } from 'react-bootstrap';
-import styled from 'styled-components';
+import { Col, Row } from "react-bootstrap";
+import styled from "styled-components";
 
-import Button from './button.js';
-import Logo from './logo.js';
+import Button from "./button.js";
+import Logo from "./logo.js";
 
 const HeaderContainer = styled(Row)`
   height: 70px;
@@ -37,7 +37,7 @@ const Header = () => (
       <Logo $fontSize="26px">SWAPP</Logo>
     </Col>
 
-    <Col style={{ justifyContent: 'flex-end', display: 'flex' }}>
+    <Col style={{ justifyContent: "flex-end", display: "flex" }}>
       <Navigation>
         <ListItem>
           <Link href="#">Episodes</Link>

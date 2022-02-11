@@ -1,14 +1,14 @@
-import { Col, Container, Row, Image } from 'react-bootstrap';
-import styled from 'styled-components';
+import { Col, Container, Row, Image } from "react-bootstrap";
+import styled from "styled-components";
 
-import ThePhantomMenace from '../../assets/The_Phantom_Menace.jpg';
-import Button from '../../components/button.js';
-import Character from '../../components/character.js';
-import Header from '../../components/header.js';
-import episodesData from '../../episodesData.js';
+import ThePhantomMenace from "../../assets/The_Phantom_Menace.jpg";
+import Button from "../../components/button.js";
+import Character from "../../components/character.js";
+import Header from "../../components/header.js";
+import episodesData from "../../episodesData.js";
 
-import Description from './description.js';
-import EpisodeHeader from './header.js';
+import Description from "./description.js";
+import EpisodeHeader from "./header.js";
 
 const CharacterColumn = styled(Col)`
   margin-top: 30px;
@@ -20,23 +20,23 @@ const Episode = () => (
 
     <Row
       style={{
-        display: 'flex',
-        justifyContent: 'center',
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <Col md="9">
         <Row
           style={{
-            marginTop: '30px',
+            marginTop: "30px",
           }}
         >
-          <Col md="3" style={{ paddingRight: '0' }}>
+          <Col md="3" style={{ paddingRight: "0" }}>
             <Image
               style={{
-                height: '200px',
-                objectFit: 'cover',
-                width: '100%',
-                borderRadius: '5px 0px 0px 5px',
+                height: "200px",
+                objectFit: "cover",
+                width: "100%",
+                borderRadius: "5px 0px 0px 5px",
               }}
               src={ThePhantomMenace}
             />
@@ -44,7 +44,7 @@ const Episode = () => (
 
           <Col
             style={{
-              paddingLeft: '0',
+              paddingLeft: "0",
             }}
           >
             <EpisodeHeader
@@ -57,7 +57,7 @@ const Episode = () => (
         <Row>
           <Col
             style={{
-              marginTop: '30px',
+              marginTop: "30px",
             }}
           >
             <Description
@@ -79,9 +79,9 @@ const Episode = () => (
         <Row>
           <Col
             style={{
-              marginTop: '30px',
-              display: 'flex',
-              justifyContent: 'center',
+              marginTop: "30px",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
             <Button $color="#ffe300" $backgroundColor="black">

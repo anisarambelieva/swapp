@@ -1,12 +1,12 @@
-import LabelValuePair from '../../components/labelValuePair.js';
+import LabelValuePair from "../../components/labelValuePair.js";
 
 const Description = ({ openingCrawl, director, releaseDate }) => (
   <div
     style={{
-      padding: '10px',
-      backgroundColor: 'white',
-      color: '#4e5b6e',
-      borderRadius: '5px',
+      padding: "10px",
+      backgroundColor: "white",
+      color: "#4e5b6e",
+      borderRadius: "5px",
     }}
   >
     <p>{openingCrawl}</p>
