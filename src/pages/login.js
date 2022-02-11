@@ -5,6 +5,7 @@ import { gql, useMutation } from "@apollo/client";
 import Button from '../components/button.js';
 import Logo from '../components/logo.js';
 import { useState } from 'react';
+import { Redirect } from "react-router-dom";
 
 const BlackBox = styled(Container)`
   background-color: black;
@@ -64,7 +65,9 @@ const Login = () => {
     setPassword(e.target.value);
   }
 
-  return (
+  return authenticated ? (
+    <Redirect push to="/episodes" />
+  ) : (
     <BlackBox $width="600px">
       <Row>
         <FormCol md={{ span: 8, offset: 2 }}>
