@@ -5,6 +5,7 @@ import { gql, useMutation } from "@apollo/client";
 import Button from '../components/button.js';
 import Logo from '../components/logo.js';
 import { useState } from 'react';
+import { Redirect } from "react-router-dom";
 
 const BlackBox = styled(Container)`
   background-color: black;
@@ -35,6 +36,7 @@ const FormCol = styled(Col)`
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [authenticated, setAuthenticated] = useState(false);
 
   const SIGNIN_MUTATION = gql`
     mutation SignInMutation($email: String!, $password: String!) {
@@ -51,6 +53,7 @@ const Login = () => {
     },
     onCompleted: ({ signIn }) => {
       localStorage.setItem('auth-token', signIn.token);
+      setAuthenticated(true);
     },
   });
 
@@ -62,7 +65,9 @@ const Login = () => {
     setPassword(e.target.value);
   }
 
-  return (
+  return authenticated ? (
+    <Redirect push to="/episodes" />
+  ) : (
     <BlackBox $width="600px">
       <Row>
         <FormCol md={{ span: 8, offset: 2 }}>
