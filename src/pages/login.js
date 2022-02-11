@@ -35,6 +35,7 @@ const FormCol = styled(Col)`
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [authenticated, setAuthenticated] = useState(false);
 
   const SIGNIN_MUTATION = gql`
     mutation SignInMutation($email: String!, $password: String!) {
@@ -51,6 +52,7 @@ const Login = () => {
     },
     onCompleted: ({ signIn }) => {
       localStorage.setItem('auth-token', signIn.token);
+      setAuthenticated(true);
     },
   });
 
