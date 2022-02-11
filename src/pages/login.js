@@ -58,7 +58,7 @@ const Login = () => {
     },
     onError: () => {
       setInvalidCredentials(true);
-    }
+    },
   });
 
   const handleEmailChange = (e) => {
@@ -81,12 +81,22 @@ const Login = () => {
 
       <WhiteBox>
         <Col>
-        {invalidCredentials ? (<FormRow>
-            <FormCol md={{ span: 8, offset: 0 }}>
-              <div style={{paddingRight: "15px", color: "red", fontWeight: "bold"}}>Invalid credentials!</div>
-            </FormCol>
-          </FormRow>) : null}
-        
+          {invalidCredentials ? (
+            <FormRow>
+              <FormCol md={{ span: 8, offset: 0 }}>
+                <div
+                  style={{
+                    paddingRight: "15px",
+                    color: "red",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Invalid credentials!
+                </div>
+              </FormCol>
+            </FormRow>
+          ) : null}
+
           <FormRow>
             <FormCol md={{ span: 8, offset: 2 }}>
               <FormControl
