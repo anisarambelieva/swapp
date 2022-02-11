@@ -11,6 +11,7 @@ import './styles/font/font.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import ProtectedRoute from './protectedRoute.js';
 
 const client = new ApolloClient({
   uri: "http://softuni-swapp-1283332882.eu-west-1.elb.amazonaws.com/graphql",
@@ -25,29 +26,29 @@ const App = () => (
           <Login />
         </Route>
 
-        <Route path="/episodes">
+        <ProtectedRoute path="/episodes">
           <Episodes />
-        </Route>
+        </ProtectedRoute>
 
-        <Route path="/episode/:id">
+        <ProtectedRoute path="/episode/:id">
           <Episode />
-        </Route>
+        </ProtectedRoute>
 
-        <Route path="/characters/:id">
+        <ProtectedRoute path="/characters/:id">
           <Character />
-        </Route>
+        </ProtectedRoute>
 
-        <Route path="/characters">
+        <ProtectedRoute path="/characters">
           <Characters />
-        </Route>
+        </ProtectedRoute>
 
-        <Route path="/starships/:id">
+        <ProtectedRoute path="/starships/:id">
           <Starship />
-        </Route>
+        </ProtectedRoute>
 
-        <Route path="/">
+        <ProtectedRoute path="/">
           <Episodes />
-        </Route>
+        </ProtectedRoute>
       </Switch>
     </Router>
   </ApolloProvider>
