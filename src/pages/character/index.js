@@ -1,15 +1,15 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from "react-bootstrap";
 
-import ThePhantomMenace from '../../assets/The_Phantom_Menace.jpg';
-import Belbullab22Starfighter from '../../assets/starships/Belbullab-22_Starfighter.png';
-import JediInterceptor from '../../assets/starships/Jedi_Interceptor.png';
-import NabooStarSkiff from '../../assets/starships/Naboo_Star_Skiff.jpeg';
-import TradeFederation from '../../assets/starships/Trade_Federation.jpeg';
-import JediStarfighter from '../../assets/starships/Yodas_Jedi_Starfighter.png';
-import Header from '../../components/header.js';
+import ThePhantomMenace from "../../assets/The_Phantom_Menace.jpg";
+import Belbullab22Starfighter from "../../assets/starships/Belbullab-22_Starfighter.png";
+import JediInterceptor from "../../assets/starships/Jedi_Interceptor.png";
+import NabooStarSkiff from "../../assets/starships/Naboo_Star_Skiff.jpeg";
+import TradeFederation from "../../assets/starships/Trade_Federation.jpeg";
+import JediStarfighter from "../../assets/starships/Yodas_Jedi_Starfighter.png";
+import Header from "../../components/header.js";
 
-import CharacterCard from './characterCard.js';
-import Starship from './starship.js';
+import CharacterCard from "./characterCard.js";
+import Starship from "./starship.js";
 
 const Character = () => (
   <Container>
@@ -17,18 +17,18 @@ const Character = () => (
 
     <Row
       style={{
-        display: 'flex',
-        justifyContent: 'center',
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <Col md="9">
-        <Row style={{ paddingTop: '20px' }}>
+        <Row style={{ paddingTop: "20px" }}>
           <Col>
             <h3
               style={{
-                textAlign: 'center',
-                color: '#4bd5ee',
-                fontWeight: 'bold',
+                textAlign: "center",
+                color: "#4bd5ee",
+                fontWeight: "bold",
               }}
             >
               Obi-Wan Kenobi
@@ -52,9 +52,9 @@ const Character = () => (
           <Col>
             <h3
               style={{
-                textAlign: 'center',
-                color: '#3C4858',
-                fontWeight: 'bold',
+                textAlign: "center",
+                color: "#3C4858",
+                fontWeight: "bold",
               }}
             >
               Piloted Starships

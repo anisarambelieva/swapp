@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react';
 import { MockedProvider } from "@apollo/client/testing";
+import { render } from "@testing-library/react";
 
-import Login from '../login.js';
+import Login from "../login.js";
 
 describe("<Login/>", () => {
   it("should render Login page with correct styles", () => {

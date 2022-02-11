@@ -1,5 +1,5 @@
-import { Card } from 'react-bootstrap';
-import styled from 'styled-components';
+import { Card } from "react-bootstrap";
+import styled from "styled-components";
 
 const CardTitle = styled(Card.Title)`
   color: #4bd5ee;
@@ -23,7 +23,7 @@ const TruncatedText = styled(Card.Text)`
 
 const EpisodeCard = ({ src, title, openingCrawl }) => (
   <StyledCard>
-    <Card.Img style={{ height: '300px', objectFit: 'cover' }} src={src} />
+    <Card.Img style={{ height: "300px", objectFit: "cover" }} src={src} />
     <Card.Body>
       <CardTitle>{title}</CardTitle>
       <TruncatedText>{openingCrawl}</TruncatedText>

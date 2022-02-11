@@ -1,7 +1,7 @@
-import { render, waitFor } from '@testing-library/react';
-import { MemoryRouter, Route } from 'react-router';
+import { render, waitFor } from "@testing-library/react";
+import { MemoryRouter, Route } from "react-router";
 
-import Character from '../index.js';
+import Character from "../index.js";
 
 const renderComponent = ({ id }) =>
   render(
@@ -9,10 +9,10 @@ const renderComponent = ({ id }) =>
       <Route path="/characters/:id">
         <Character />
       </Route>
-    </MemoryRouter>,
+    </MemoryRouter>
   );
 
-it('renders character with id 5', async () => {
+it("renders character with id 5", async () => {
   const { queryByText } = renderComponent({ id: 5 });
 
   await waitFor(() => queryByText(/Character with id 5/));

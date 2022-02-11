@@ -1,9 +1,9 @@
-import '@testing-library/jest-dom';
-import 'jest-styled-components';
+import "@testing-library/jest-dom";
+import "jest-styled-components";
 
 beforeEach(() => {
-  jest.spyOn(console, 'error');
-  jest.spyOn(console, 'warn');
+  jest.spyOn(console, "error");
+  jest.spyOn(console, "warn");
 });
 
 afterEach(() => {

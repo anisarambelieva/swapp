@@ -1,5 +1,5 @@
-import { Col, Row, Image } from 'react-bootstrap';
-import styled from 'styled-components';
+import { Col, Row, Image } from "react-bootstrap";
+import styled from "styled-components";
 
 const CharacterName = styled.h1`
   background-color: white;
@@ -15,13 +15,13 @@ const CharacterName = styled.h1`
 
 const Character = ({ imageSrc, name }) => (
   <Row>
-    <Col md="4" style={{ paddingRight: '0' }}>
+    <Col md="4" style={{ paddingRight: "0" }}>
       <Image
         style={{
-          height: '100px',
-          objectFit: 'cover',
-          width: '100%',
-          borderRadius: '5px 0px 0px 5px',
+          height: "100px",
+          objectFit: "cover",
+          width: "100%",
+          borderRadius: "5px 0px 0px 5px",
         }}
         src={imageSrc}
       />
@@ -29,7 +29,7 @@ const Character = ({ imageSrc, name }) => (
 
     <Col
       style={{
-        height: '100px',
+        height: "100px",
         paddingLeft: 0,
       }}
     >
