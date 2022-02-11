@@ -118,7 +118,7 @@ exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
           >
             <a
               class="c4"
-              href="#"
+              href="/episodes"
             >
               Episodes
             </a>
@@ -128,7 +128,7 @@ exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
           >
             <a
               class="c4"
-              href="#"
+              href="/characters"
             >
               Characters
             </a>

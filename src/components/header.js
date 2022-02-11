@@ -40,11 +40,11 @@ const Header = () => (
     <Col style={{ justifyContent: "flex-end", display: "flex" }}>
       <Navigation>
         <ListItem>
-          <Link href="#">Episodes</Link>
+          <Link href="/episodes">Episodes</Link>
         </ListItem>
 
         <ListItem>
-          <Link href="#">Characters</Link>
+          <Link href="/characters">Characters</Link>
         </ListItem>
 
         <ListItem>
