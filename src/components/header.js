@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 
 import Button from "./button.js";
@@ -31,30 +33,49 @@ const Link = styled.a`
   color: #4bd5ee;
 `;
 
-const Header = () => (
-  <HeaderContainer>
-    <Col md="3">
-      <Logo $fontSize="26px">SWAPP</Logo>
-    </Col>
+const Header = () => {
+  const [loggedOut, setLoggedOut] = useState(false);
 
-    <Col style={{ justifyContent: "flex-end", display: "flex" }}>
-      <Navigation>
-        <ListItem>
-          <Link href="/episodes">Episodes</Link>
-        </ListItem>
+  const handleLogout = () => {
+    const token = localStorage.getItem("auth-token");
 
-        <ListItem>
-          <Link href="/characters">Characters</Link>
-        </ListItem>
+    if (token) {
+      localStorage.clear();
+      setLoggedOut(true);
+    }
+  };
 
-        <ListItem>
-          <Button $color="#4bd5ee" $backgroundColor="#fff">
-            Logout
-          </Button>
-        </ListItem>
-      </Navigation>
-    </Col>
-  </HeaderContainer>
-);
+  return loggedOut ? (
+    <Redirect push to="/login" />
+  ) : (
+    <HeaderContainer>
+      <Col md="3">
+        <Logo $fontSize="26px">SWAPP</Logo>
+      </Col>
+
+      <Col style={{ justifyContent: "flex-end", display: "flex" }}>
+        <Navigation>
+          <ListItem>
+            <Link href="/episodes">Episodes</Link>
+          </ListItem>
+
+          <ListItem>
+            <Link href="/characters">Characters</Link>
+          </ListItem>
+
+          <ListItem>
+            <Button
+              $color="#4bd5ee"
+              $backgroundColor="#fff"
+              onClick={handleLogout}
+            >
+              Logout
+            </Button>
+          </ListItem>
+        </Navigation>
+      </Col>
+    </HeaderContainer>
+  );
+};
 
 export default Header;
