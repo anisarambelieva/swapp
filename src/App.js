@@ -1,6 +1,7 @@
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import client from "./client/index.js";
 import Character from "./pages/character/index.js";
 import Characters from "./pages/characters.js";
 import Episode from "./pages/episode/index.js";
@@ -12,11 +13,6 @@ import ProtectedRoute from "./protectedRoute.js";
 import "./styles/font/font.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
-
-const client = new ApolloClient({
-  uri: "http://softuni-swapp-1283332882.eu-west-1.elb.amazonaws.com/graphql",
-  cache: new InMemoryCache(),
-});
 
 const App = () => (
   <ApolloProvider client={client}>
