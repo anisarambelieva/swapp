@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql, useQuery } from "@apollo/client";
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 
@@ -32,28 +32,34 @@ const CHARACTERS_QUERY = gql`
   }
 `;
 
-const Characters = () => (
-  <Container>
-    <Header />
+const Characters = () => {
+  const { data, fetchMore } = useQuery(CHARACTERS_QUERY, {
+    variables: { perPage: 12 },
+  });
 
-    <Row>
-      <CharacterColumn md="4">
-        <Character imageSrc={Annakin} name="Annakin Skywalker" />
-      </CharacterColumn>
-      <CharacterColumn md="4">
-        <Character imageSrc={Jabba} name="Jabba Desilijic Tiure" />
-      </CharacterColumn>
-      <CharacterColumn md="4">
-        <Character imageSrc={Yoda} name="Yoda" />
-      </CharacterColumn>
-      <CharacterColumn md="4">
-        <Character imageSrc={CPO} name="C-3PO" />
-      </CharacterColumn>
-      <CharacterColumn md="4">
-        <Character imageSrc={Obi} name="Obi-Wan Kenobi" />
-      </CharacterColumn>
-    </Row>
-  </Container>
-);
+  return (
+    <Container>
+      <Header />
+
+      <Row>
+        <CharacterColumn md="4">
+          <Character imageSrc={Annakin} name="Annakin Skywalker" />
+        </CharacterColumn>
+        <CharacterColumn md="4">
+          <Character imageSrc={Jabba} name="Jabba Desilijic Tiure" />
+        </CharacterColumn>
+        <CharacterColumn md="4">
+          <Character imageSrc={Yoda} name="Yoda" />
+        </CharacterColumn>
+        <CharacterColumn md="4">
+          <Character imageSrc={CPO} name="C-3PO" />
+        </CharacterColumn>
+        <CharacterColumn md="4">
+          <Character imageSrc={Obi} name="Obi-Wan Kenobi" />
+        </CharacterColumn>
+      </Row>
+    </Container>
+  );
+};
 
 export default Characters;
