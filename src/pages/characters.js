@@ -1,3 +1,4 @@
+import { gql } from "@apollo/client";
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 
@@ -11,6 +12,24 @@ import Header from "../components/header";
 
 const CharacterColumn = styled(Col)`
   margin-top: 30px;
+`;
+
+const CHARACTERS_QUERY = gql`
+  query AllPeople($perPage: Int!, $after: String) {
+    allPeople(first: $perPage, after: $after) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      edges {
+        node {
+          id
+          name
+          image
+        }
+      }
+    }
+  }
 `;
 
 const Characters = () => (
