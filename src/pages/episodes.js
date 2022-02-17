@@ -1,10 +1,9 @@
-import { gql } from "@apollo/client";
+import { gql, useQuery } from "@apollo/client";
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 
 import EpisodeCard from "../components/episodeCard.js";
 import Header from "../components/header.js";
-import episodesData from "../episodesData.js";
 
 const CardColumn = styled(Col)`
   display: flex;
@@ -26,20 +25,31 @@ const EPISODES_QUERY = gql`
       }
     }
   }
-`
+`;
 
-const Episodes = () => (
-  <Container>
-    <Header />
+const Episodes = () => {
+  const { data } = useQuery(EPISODES_QUERY, {
+    variables: { perPage: 6 },
+  });
 
-    <Row style={{ paddingBottom: "30px" }}>
-      {episodesData.map(({ id, ...rest }) => (
-        <CardColumn key={id} md="4">
-          <EpisodeCard {...rest} />
-        </CardColumn>
-      ))}
-    </Row>
-  </Container>
-);
+  const { allEpisodes } = data;
 
+  return (
+    <Container>
+      <Header />
+
+      <Row style={{ paddingBottom: "30px" }}>
+        {allEpisodes.edges.map(({ node }) => (
+          <CardColumn key={node.id} md="4">
+            <EpisodeCard
+              src={node.image}
+              title={node.title}
+              openingCrawl={node.openingCrawl}
+            />
+          </CardColumn>
+        ))}
+      </Row>
+    </Container>
+  );
+};
 export default Episodes;
