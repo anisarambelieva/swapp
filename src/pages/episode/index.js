@@ -3,11 +3,9 @@ import { Col, Container, Row, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import ThePhantomMenace from "../../assets/The_Phantom_Menace.jpg";
 import Button from "../../components/button.js";
 import Character from "../../components/character.js";
 import Header from "../../components/header.js";
-import episodesData from "../../episodesData.js";
 
 import Description from "./description.js";
 import EpisodeHeader from "./header.js";
@@ -70,6 +68,8 @@ const Episode = () => {
     );
   }
 
+  const { episode } = data;
+
   return (
     <Container>
       <Header />
@@ -94,7 +94,7 @@ const Episode = () => {
                   width: "100%",
                   borderRadius: "5px 0px 0px 5px",
                 }}
-                src={ThePhantomMenace}
+                src={episode.image}
               />
             </Col>
 
@@ -104,8 +104,8 @@ const Episode = () => {
               }}
             >
               <EpisodeHeader
-                title="Star wars: Episode 1"
-                subtitle="The Phantom Menace"
+                title={`Star Wars: Episode ${id}`}
+                subtitle={episode.title}
               />
             </Col>
           </Row>
@@ -117,17 +117,24 @@ const Episode = () => {
               }}
             >
               <Description
-                openingCrawl={episodesData[0].openingCrawl}
-                director="George Lucas"
-                releaseDate="1999-05-19"
+                openingCrawl={episode.openingCrawl}
+                director={episode.director}
+                releaseDate={episode.releaseDate}
               />
             </Col>
           </Row>
 
           <Row>
-            {episodesData[0].characters.map(({ id, ...rest }) => (
-              <CharacterColumn key={id} md="4">
-                <Character {...rest} />
+            {episode.people.edges.map(({ node }) => (
+              <CharacterColumn key={node.id} md="4">
+                {node.name === "Luke Skywalker" ? (
+                  <Character
+                    imageSrc="https://www.nme.com/wp-content/uploads/2021/01/markhamill-lukeskywalker-2000x1270-1.jpg"
+                    name={node.name}
+                  />
+                ) : (
+                  <Character imageSrc={node.image} name={node.name} />
+                )}
               </CharacterColumn>
             ))}
           </Row>
