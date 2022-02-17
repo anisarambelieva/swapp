@@ -1,5 +1,6 @@
-import { gql } from "@apollo/client";
+import { gql, useQuery } from "@apollo/client";
 import { Col, Container, Row, Image } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 import ThePhantomMenace from "../../assets/The_Phantom_Menace.jpg";
@@ -42,6 +43,33 @@ const EPISODE_QUERY = gql`
 `;
 
 const Episode = () => {
+  const { id } = useParams();
+
+  const { data, error, loading } = useQuery(EPISODE_QUERY, {
+    variables: {
+      episodeId: `films.${id}`,
+      perPage: 5,
+    },
+  });
+
+  if (error) {
+    return (
+      <Container>
+        <Header />
+        <div>Something's wrong!</div>
+      </Container>
+    );
+  }
+
+  if (loading) {
+    return (
+      <Container>
+        <Header />
+        <div>Loading</div>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       <Header />
