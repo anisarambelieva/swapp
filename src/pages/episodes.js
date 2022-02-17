@@ -1,3 +1,4 @@
+import { gql } from "@apollo/client";
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 
@@ -10,6 +11,22 @@ const CardColumn = styled(Col)`
   justify-content: center;
   margin-top: 30px;
 `;
+
+const EPISODES_QUERY = gql`
+  query AllEpisodes($perPage: Int!) {
+    allEpisodes(first: $perPage) {
+      edges {
+        node {
+          id
+          title
+          episodeId
+          image
+          openingCrawl
+        }
+      }
+    }
+  }
+`
 
 const Episodes = () => (
   <Container>
