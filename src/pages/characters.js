@@ -41,26 +41,18 @@ const Characters = () => {
     );
   }
 
+  const { allPeople } = data;
+
   return (
     <Container>
       <Header />
 
       <Row>
-        <CharacterColumn md="4">
-          <Character imageSrc={Annakin} name="Annakin Skywalker" />
-        </CharacterColumn>
-        <CharacterColumn md="4">
-          <Character imageSrc={Jabba} name="Jabba Desilijic Tiure" />
-        </CharacterColumn>
-        <CharacterColumn md="4">
-          <Character imageSrc={Yoda} name="Yoda" />
-        </CharacterColumn>
-        <CharacterColumn md="4">
-          <Character imageSrc={CPO} name="C-3PO" />
-        </CharacterColumn>
-        <CharacterColumn md="4">
-          <Character imageSrc={Obi} name="Obi-Wan Kenobi" />
-        </CharacterColumn>
+        {allPeople.edges.map((edge) => (
+          <CharacterColumn key={edge.node.id} md="4">
+            <Character imageSrc={edge.node.image} name={edge.node.name} />
+          </CharacterColumn>
+        ))}
       </Row>
     </Container>
   );
