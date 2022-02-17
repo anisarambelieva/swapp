@@ -50,7 +50,14 @@ const Characters = () => {
       <Row>
         {allPeople.edges.map((edge) => (
           <CharacterColumn key={edge.node.id} md="4">
-            <Character imageSrc={edge.node.image} name={edge.node.name} />
+            {edge.node.name === "Luke Skywalker" ? (
+              <Character
+                imageSrc="https://www.nme.com/wp-content/uploads/2021/01/markhamill-lukeskywalker-2000x1270-1.jpg"
+                name={edge.node.name}
+              />
+            ) : (
+              <Character imageSrc={edge.node.image} name={edge.node.name} />
+            )}
           </CharacterColumn>
         ))}
       </Row>
