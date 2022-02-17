@@ -28,9 +28,18 @@ const CHARACTERS_QUERY = gql`
 `;
 
 const Characters = () => {
-  const { data, loading } = useQuery(CHARACTERS_QUERY, {
+  const { data, error, loading } = useQuery(CHARACTERS_QUERY, {
     variables: { perPage: 12 },
   });
+
+  if (error) {
+    return (
+      <Container>
+        <Header />
+        <div>Something's wrong!</div>
+      </Container>
+    );
+  }
 
   if (loading) {
     return (
