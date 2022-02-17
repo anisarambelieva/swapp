@@ -28,9 +28,27 @@ const EPISODES_QUERY = gql`
 `;
 
 const Episodes = () => {
-  const { data } = useQuery(EPISODES_QUERY, {
+  const { data, error, loading } = useQuery(EPISODES_QUERY, {
     variables: { perPage: 6 },
   });
+
+  if (error) {
+    return (
+      <Container>
+        <Header />
+        <div>Something's wrong!</div>
+      </Container>
+    );
+  }
+
+  if (loading) {
+    return (
+      <Container>
+        <Header />
+        <div>Loading</div>
+      </Container>
+    );
+  }
 
   const { allEpisodes } = data;
 
