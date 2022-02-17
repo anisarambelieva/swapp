@@ -2,11 +2,6 @@ import { gql, useQuery } from "@apollo/client";
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 
-import Annakin from "../assets/Annakin.webp";
-import CPO from "../assets/C-3PO.jpg";
-import Jabba from "../assets/Jabba.webp";
-import Obi from "../assets/Obi-Wan.jpg";
-import Yoda from "../assets/Yoda.webp";
 import Character from "../components/character";
 import Header from "../components/header";
 
