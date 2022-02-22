@@ -2,7 +2,6 @@ import { gql, useQuery } from "@apollo/client";
 import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
-import ThePhantomMenace from "../../assets/The_Phantom_Menace.jpg";
 import Belbullab22Starfighter from "../../assets/starships/Belbullab-22_Starfighter.png";
 import JediInterceptor from "../../assets/starships/Jedi_Interceptor.png";
 import NabooStarSkiff from "../../assets/starships/Naboo_Star_Skiff.jpeg";
@@ -94,7 +93,7 @@ const Character = () => {
                   fontWeight: "bold",
                 }}
               >
-                Obi-Wan Kenobi
+                {person.name}
               </h3>
               <hr />
             </Col>
@@ -103,12 +102,12 @@ const Character = () => {
           <Row>
             <Col>
               <CharacterCard
-                name="Obi-Wan Kenobi"
-                imageSrc={ThePhantomMenace}
-                height="182"
-                weight="90"
-                species="Human"
-                homeWorld="Stewjon"
+                name={person.name}
+                imageSrc={person.image}
+                height={person.height}
+                weight={person.mass}
+                species={person.species ? person.species.name : "Human"}
+                homeWorld={person.homeworld.name}
               />
             </Col>
 
