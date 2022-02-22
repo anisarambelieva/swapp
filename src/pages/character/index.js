@@ -122,22 +122,13 @@ const Character = () => {
               </h3>
 
               <hr />
-
-              <Starship imageSrc={JediStarfighter} name="Jedi starfighter" />
-
-              <Starship
-                imageSrc={TradeFederation}
-                name="Trade Federation cruiser"
-              />
-
-              <Starship imageSrc={NabooStarSkiff} name="Naboo star skiff" />
-
-              <Starship imageSrc={JediInterceptor} name="Jedi Interceptor" />
-
-              <Starship
-                imageSrc={Belbullab22Starfighter}
-                name="Belbullab-22 starfighter"
-              />
+              {person.starships.edges.map(({ node }) => (
+                <Starship
+                  key={node.id}
+                  imageSrc={node.image}
+                  name={node.name}
+                />
+              ))}
             </Col>
           </Row>
         </Col>
