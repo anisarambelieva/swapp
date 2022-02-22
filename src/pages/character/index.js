@@ -44,7 +44,6 @@ export const CHARACTER_QUERY = gql`
 
 const Character = () => {
   const { id } = useParams();
-  console.log(id);
 
   const { data, error, loading } = useQuery(CHARACTER_QUERY, {
     variables: {
