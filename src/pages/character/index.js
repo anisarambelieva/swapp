@@ -2,11 +2,6 @@ import { gql, useQuery } from "@apollo/client";
 import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
-import Belbullab22Starfighter from "../../assets/starships/Belbullab-22_Starfighter.png";
-import JediInterceptor from "../../assets/starships/Jedi_Interceptor.png";
-import NabooStarSkiff from "../../assets/starships/Naboo_Star_Skiff.jpeg";
-import TradeFederation from "../../assets/starships/Trade_Federation.jpeg";
-import JediStarfighter from "../../assets/starships/Yodas_Jedi_Starfighter.png";
 import Header from "../../components/header.js";
 
 import CharacterCard from "./characterCard.js";
