@@ -1,5 +1,6 @@
-import { gql } from "@apollo/client";
+import { gql, useQuery } from "@apollo/client";
 import { Container, Row, Col } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 
 import ThePhantomMenace from "../../assets/The_Phantom_Menace.jpg";
 import Belbullab22Starfighter from "../../assets/starships/Belbullab-22_Starfighter.png";
@@ -42,77 +43,109 @@ export const CHARACTER_QUERY = gql`
   }
 `;
 
-const Character = () => (
-  <Container>
-    <Header />
+const Character = () => {
+  const { id } = useParams();
+  console.log(id);
 
-    <Row
-      style={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <Col md="9">
-        <Row style={{ paddingTop: "20px" }}>
-          <Col>
-            <h3
-              style={{
-                textAlign: "center",
-                color: "#4bd5ee",
-                fontWeight: "bold",
-              }}
-            >
-              Obi-Wan Kenobi
-            </h3>
-            <hr />
-          </Col>
-        </Row>
+  const { data, error, loading } = useQuery(CHARACTER_QUERY, {
+    variables: {
+      characterId: `people.${id}`,
+      perPage: 5,
+    },
+  });
 
-        <Row>
-          <Col>
-            <CharacterCard
-              name="Obi-Wan Kenobi"
-              imageSrc={ThePhantomMenace}
-              height="182"
-              weight="90"
-              species="Human"
-              homeWorld="Stewjon"
-            />
-          </Col>
+  if (error) {
+    return (
+      <Container>
+        <Header />
+        <div>Something's wrong!</div>
+      </Container>
+    );
+  }
 
-          <Col>
-            <h3
-              style={{
-                textAlign: "center",
-                color: "#3C4858",
-                fontWeight: "bold",
-              }}
-            >
-              Piloted Starships
-            </h3>
+  if (loading) {
+    return (
+      <Container>
+        <Header />
+        <div>Loading</div>
+      </Container>
+    );
+  }
 
-            <hr />
+  const { person } = data;
 
-            <Starship imageSrc={JediStarfighter} name="Jedi starfighter" />
+  return (
+    <Container>
+      <Header />
 
-            <Starship
-              imageSrc={TradeFederation}
-              name="Trade Federation cruiser"
-            />
+      <Row
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Col md="9">
+          <Row style={{ paddingTop: "20px" }}>
+            <Col>
+              <h3
+                style={{
+                  textAlign: "center",
+                  color: "#4bd5ee",
+                  fontWeight: "bold",
+                }}
+              >
+                Obi-Wan Kenobi
+              </h3>
+              <hr />
+            </Col>
+          </Row>
 
-            <Starship imageSrc={NabooStarSkiff} name="Naboo star skiff" />
+          <Row>
+            <Col>
+              <CharacterCard
+                name="Obi-Wan Kenobi"
+                imageSrc={ThePhantomMenace}
+                height="182"
+                weight="90"
+                species="Human"
+                homeWorld="Stewjon"
+              />
+            </Col>
 
-            <Starship imageSrc={JediInterceptor} name="Jedi Interceptor" />
+            <Col>
+              <h3
+                style={{
+                  textAlign: "center",
+                  color: "#3C4858",
+                  fontWeight: "bold",
+                }}
+              >
+                Piloted Starships
+              </h3>
 
-            <Starship
-              imageSrc={Belbullab22Starfighter}
-              name="Belbullab-22 starfighter"
-            />
-          </Col>
-        </Row>
-      </Col>
-    </Row>
-  </Container>
-);
+              <hr />
+
+              <Starship imageSrc={JediStarfighter} name="Jedi starfighter" />
+
+              <Starship
+                imageSrc={TradeFederation}
+                name="Trade Federation cruiser"
+              />
+
+              <Starship imageSrc={NabooStarSkiff} name="Naboo star skiff" />
+
+              <Starship imageSrc={JediInterceptor} name="Jedi Interceptor" />
+
+              <Starship
+                imageSrc={Belbullab22Starfighter}
+                name="Belbullab-22 starfighter"
+              />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
 export default Character;
