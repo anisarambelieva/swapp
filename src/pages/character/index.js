@@ -1,3 +1,4 @@
+import { gql } from "@apollo/client";
 import { Container, Row, Col } from "react-bootstrap";
 
 import ThePhantomMenace from "../../assets/The_Phantom_Menace.jpg";
@@ -10,6 +11,36 @@ import Header from "../../components/header.js";
 
 import CharacterCard from "./characterCard.js";
 import Starship from "./starship.js";
+
+export const CHARACTER_QUERY = gql`
+  query ($characterId: ID!) {
+    person(id: $characterId) {
+      id
+      name
+      birthYear
+      height
+      mass
+      image
+      homeworld {
+        id
+        name
+      }
+      species {
+        id
+        name
+      }
+      starships(first: 10) {
+        edges {
+          node {
+            id
+            name
+            image
+          }
+        }
+      }
+    }
+  }
+`;
 
 const Character = () => (
   <Container>
