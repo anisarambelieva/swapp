@@ -131,9 +131,14 @@ const Episode = () => {
                   <Character
                     imageSrc="https://www.nme.com/wp-content/uploads/2021/01/markhamill-lukeskywalker-2000x1270-1.jpg"
                     name={node.name}
+                    id={node.id}
                   />
                 ) : (
-                  <Character imageSrc={node.image} name={node.name} />
+                  <Character
+                    imageSrc={node.image}
+                    name={node.name}
+                    id={node.id}
+                  />
                 )}
               </CharacterColumn>
             ))}

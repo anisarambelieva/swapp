@@ -63,9 +63,14 @@ const Characters = () => {
               <Character
                 imageSrc="https://www.nme.com/wp-content/uploads/2021/01/markhamill-lukeskywalker-2000x1270-1.jpg"
                 name={edge.node.name}
+                id={edge.node.id}
               />
             ) : (
-              <Character imageSrc={edge.node.image} name={edge.node.name} />
+              <Character
+                imageSrc={edge.node.image}
+                name={edge.node.name}
+                id={edge.node.id}
+              />
             )}
           </CharacterColumn>
         ))}
