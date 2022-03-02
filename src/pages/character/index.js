@@ -1,6 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
 
 import Header from "../../components/header.js";
 
@@ -37,6 +38,11 @@ export const CHARACTER_QUERY = gql`
   }
 `;
 
+const CharacterName = styled.h3`
+  text-align: center;
+  color: #4bd5ee;
+  font-weight: bold;
+`;
 const Character = () => {
   const { id } = useParams();
 
@@ -80,15 +86,7 @@ const Character = () => {
         <Col md="9">
           <Row style={{ paddingTop: "20px" }}>
             <Col>
-              <h3
-                style={{
-                  textAlign: "center",
-                  color: "#4bd5ee",
-                  fontWeight: "bold",
-                }}
-              >
-                {person.name}
-              </h3>
+              <CharacterName>{person.name}</CharacterName>
               <hr />
             </Col>
           </Row>
