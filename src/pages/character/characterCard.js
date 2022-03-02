@@ -17,6 +17,12 @@ const CharacterInfo = styled.div`
   border-radius: 5px;
 `;
 
+const CharacterName = styled.h4`
+  text-align: center;
+  color: #4bd5ee;
+  font-weight: bold;
+`;
+
 const CharacterCard = ({
   name,
   imageSrc,
@@ -26,9 +32,7 @@ const CharacterCard = ({
   homeWorld,
 }) => (
   <CharacterInfo>
-    <h4 style={{ textAlign: "center", color: "#4bd5ee", fontWeight: "bold" }}>
-      {name}
-    </h4>
+    <CharacterName>{name}</CharacterName>
 
     <CharacterImage src={imageSrc} />
 
