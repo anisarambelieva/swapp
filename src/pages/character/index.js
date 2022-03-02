@@ -43,6 +43,13 @@ const CharacterName = styled.h3`
   color: #4bd5ee;
   font-weight: bold;
 `;
+
+const StarshipsHeading = styled.h3`
+  text-align: center;
+  color: #3c4858;
+  font-weight: bold;
+`;
+
 const Character = () => {
   const { id } = useParams();
 
@@ -104,15 +111,7 @@ const Character = () => {
             </Col>
 
             <Col>
-              <h3
-                style={{
-                  textAlign: "center",
-                  color: "#3C4858",
-                  fontWeight: "bold",
-                }}
-              >
-                Piloted Starships
-              </h3>
+              <StarshipsHeading>Piloted Starships</StarshipsHeading>
 
               <hr />
               {person.starships.edges.map(({ node }) => (
