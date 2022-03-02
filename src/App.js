@@ -1,5 +1,7 @@
 import { ApolloProvider } from "@apollo/client";
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 
 import client from "./client/index.js";
 import Character from "./pages/character/index.js";
@@ -9,45 +11,51 @@ import Episodes from "./pages/episodes.js";
 import Login from "./pages/login.js";
 import Starship from "./pages/starship.js";
 import ProtectedRoute from "./protectedRoute.js";
-
 import "./styles/font/font.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
+import themes from "./styles/themes.js";
 
-const App = () => (
-  <ApolloProvider client={client}>
-    <Router>
-      <Switch>
-        <Route path="/login">
-          <Login />
-        </Route>
+const App = () => {
+  const [theme, setTheme] = useState("light");
 
-        <ProtectedRoute path="/episodes">
-          <Episodes />
-        </ProtectedRoute>
+  return (
+    <ThemeProvider theme={themes[theme]}>
+      <ApolloProvider client={client}>
+        <Router>
+          <Switch>
+            <Route path="/login">
+              <Login />
+            </Route>
 
-        <ProtectedRoute path="/episode/:id">
-          <Episode />
-        </ProtectedRoute>
+            <ProtectedRoute path="/episodes">
+              <Episodes />
+            </ProtectedRoute>
 
-        <ProtectedRoute path="/characters/:id">
-          <Character />
-        </ProtectedRoute>
+            <ProtectedRoute path="/episode/:id">
+              <Episode />
+            </ProtectedRoute>
 
-        <ProtectedRoute path="/characters">
-          <Characters />
-        </ProtectedRoute>
+            <ProtectedRoute path="/characters/:id">
+              <Character />
+            </ProtectedRoute>
 
-        <ProtectedRoute path="/starships/:id">
-          <Starship />
-        </ProtectedRoute>
+            <ProtectedRoute path="/characters">
+              <Characters />
+            </ProtectedRoute>
 
-        <ProtectedRoute path="/">
-          <Episodes />
-        </ProtectedRoute>
-      </Switch>
-    </Router>
-  </ApolloProvider>
-);
+            <ProtectedRoute path="/starships/:id">
+              <Starship />
+            </ProtectedRoute>
+
+            <ProtectedRoute path="/">
+              <Episodes />
+            </ProtectedRoute>
+          </Switch>
+        </Router>
+      </ApolloProvider>
+    </ThemeProvider>
+  );
+};
 
 export default App;

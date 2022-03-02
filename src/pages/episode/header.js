@@ -3,13 +3,13 @@ import styled from "styled-components";
 const EpisodeTitle = styled.h1`
   font-size: 30px;
   font-weight: bold;
-  color: #4bd5ee;
+  color: ${(props) => props.theme.text.primary};
 `;
 
 const EpisodeSubtitle = styled.h2`
   font-size: 25px;
   font-weight: bold;
-  color: #4e5b6e;
+  color: ${(props) => props.theme.text.secondary};
 `;
 
 const EpisodeHeader = ({ title, subtitle }) => (
