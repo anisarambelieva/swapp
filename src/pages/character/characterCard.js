@@ -1,6 +1,14 @@
 import { Image } from "react-bootstrap";
+import styled from "styled-components";
 
 import LabelValuePair from "../../components/labelValuePair.js";
+
+const CharacterImage = styled(Image)`
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 5px;
+`;
 
 const CharacterCard = ({
   name,
@@ -22,15 +30,7 @@ const CharacterCard = ({
       {name}
     </h4>
 
-    <Image
-      style={{
-        height: "300px",
-        objectFit: "cover",
-        width: "100%",
-        marginBottom: "5px",
-      }}
-      src={imageSrc}
-    />
+    <CharacterImage src={imageSrc} />
 
     <LabelValuePair label="Height" value={height} />
     <LabelValuePair label="Weight" value={weight} />
