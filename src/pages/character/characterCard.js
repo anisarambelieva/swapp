@@ -10,6 +10,13 @@ const CharacterImage = styled(Image)`
   margin-bottom: 5px;
 `;
 
+const CharacterInfo = styled.div`
+  background-color: white;
+  padding: 10px 30px;
+  margin-left: 15px;
+  border-radius: 5px;
+`;
+
 const CharacterCard = ({
   name,
   imageSrc,
@@ -18,14 +25,7 @@ const CharacterCard = ({
   species,
   homeWorld,
 }) => (
-  <div
-    style={{
-      backgroundColor: "white",
-      padding: "10px 30px",
-      marginLeft: "15px",
-      borderRadius: "5px",
-    }}
-  >
+  <CharacterInfo>
     <h4 style={{ textAlign: "center", color: "#4bd5ee", fontWeight: "bold" }}>
       {name}
     </h4>
@@ -36,7 +36,7 @@ const CharacterCard = ({
     <LabelValuePair label="Weight" value={weight} />
     <LabelValuePair label="Species" value={species} />
     <LabelValuePair label="Home World" value={homeWorld} />
-  </div>
+  </CharacterInfo>
 );
 
 export default CharacterCard;
