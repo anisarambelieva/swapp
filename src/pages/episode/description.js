@@ -4,7 +4,7 @@ import LabelValuePair from "../../components/labelValuePair.js";
 
 const DescriptionBox = styled.div`
   padding: 10px;
-  background-color: white;
+  background-color: ${(props) => props.theme.background};
   color: #4e5b6e;
   border-radius: 5px;
 `;

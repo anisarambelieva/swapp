@@ -14,7 +14,7 @@ exports[`<EpisodeHeader /> should match snapshot 1`] = `
 }
 
 .c0 {
-  background-color: white;
+  background-color: #FFF;
   height: 100%;
   padding-left: 50px;
   padding-top: 55px;

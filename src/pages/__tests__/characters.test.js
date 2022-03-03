@@ -1,7 +1,9 @@
 import { gql } from "@apollo/client";
 import { MockedProvider } from "@apollo/client/testing";
 import { render, screen } from "@testing-library/react";
+import { ThemeProvider } from "styled-components";
 
+import themes from "../../styles/themes.js";
 import Characters from "../characters.js";
 
 const CHARACTERS_QUERY = gql`
@@ -54,9 +56,11 @@ describe("<Characters/>", () => {
     ];
 
     const { container } = render(
-      <MockedProvider mocks={mockData}>
-        <Characters />
-      </MockedProvider>
+      <ThemeProvider theme={themes["light"]}>
+        <MockedProvider mocks={mockData}>
+          <Characters />
+        </MockedProvider>
+      </ThemeProvider>
     );
 
     await screen.findByText("Luke Skywalker");

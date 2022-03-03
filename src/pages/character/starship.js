@@ -5,11 +5,11 @@ const Name = styled.h1`
   font-size: 20px;
   font-weight: bold;
   margin: 0;
-  color: #4bd5ee;
+  color: ${(props) => props.theme.text.primary};
 `;
 
 const NameContainer = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.background};
   border-radius: 0px 5px 5px 0px;
   height: 100%;
   display: flex;

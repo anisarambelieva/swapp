@@ -5,11 +5,11 @@ exports[`<Starship /> should match snapshot 1`] = `
   font-size: 20px;
   font-weight: bold;
   margin: 0;
-  color: #4bd5ee;
+  color: #4BD5EE;
 }
 
 .c1 {
-  background-color: white;
+  background-color: #FFF;
   border-radius: 0px 5px 5px 0px;
   height: 100%;
   display: -webkit-box;
