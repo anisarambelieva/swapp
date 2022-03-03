@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const Label = styled.p`
-  color: #4e5b6e;
+  color: ${(props) => props.theme.text.secondary};
   margin: 0;
   font-weight: bold;
 `;
 
 const Value = styled.span`
-  color: #4bd5ee;
+  color: ${(props) => props.theme.text.primary};
 `;
 
 const LabelValuePair = ({ label, value }) => (
