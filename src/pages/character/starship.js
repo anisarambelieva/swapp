@@ -17,18 +17,17 @@ const NameContainer = styled.div`
   align-items: center;
 `;
 
+const StarshipImage = styled(Image)`
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+`;
+
 const Starship = ({ imageSrc, name }) => (
   <Row style={{ margin: "10px 0px 0px 0px", height: "70px" }}>
     <Col md="3" style={{ paddingRight: "0" }}>
-      <Image
-        style={{
-          height: "100%",
-          objectFit: "cover",
-          width: "100%",
-          borderRadius: "5px 0px 0px 5px",
-        }}
-        src={imageSrc}
-      />
+      <StarshipImage src={imageSrc} />
     </Col>
 
     <Col

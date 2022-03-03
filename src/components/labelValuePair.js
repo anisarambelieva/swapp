@@ -1,7 +1,19 @@
+import styled from "styled-components";
+
+const Label = styled.p`
+  color: #4e5b6e;
+  margin: 0;
+  font-weight: bold;
+`;
+
+const Value = styled.span`
+  color: #4bd5ee;
+`;
+
 const LabelValuePair = ({ label, value }) => (
-  <p style={{ color: "#4e5b6e", margin: "0", fontWeight: "bold" }}>
-    {label}: <span style={{ color: "#4bd5ee" }}>{value}</span>
-  </p>
+  <Label>
+    {label}: <Value>{value}</Value>
+  </Label>
 );
 
 export default LabelValuePair;

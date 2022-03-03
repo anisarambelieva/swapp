@@ -14,6 +14,13 @@ const CharacterName = styled.h1`
   border-radius: 0px 5px 5px 0px;
 `;
 
+const CharacterImage = styled(Image)`
+  height: 100px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+`;
+
 const Character = ({ imageSrc, name, id }) => {
   const history = useHistory();
 
@@ -25,15 +32,7 @@ const Character = ({ imageSrc, name, id }) => {
   return (
     <Row onClick={handleClick}>
       <Col md="4" style={{ paddingRight: "0" }}>
-        <Image
-          style={{
-            height: "100px",
-            objectFit: "cover",
-            width: "100%",
-            borderRadius: "5px 0px 0px 5px",
-          }}
-          src={imageSrc}
-        />
+        <CharacterImage src={imageSrc} />
       </Col>
 
       <Col

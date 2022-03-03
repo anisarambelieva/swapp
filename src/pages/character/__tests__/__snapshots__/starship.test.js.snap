@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Starship /> should match snapshot 1`] = `
-.c1 {
+.c2 {
   font-size: 20px;
   font-weight: bold;
   margin: 0;
   color: #4bd5ee;
 }
 
-.c0 {
+.c1 {
   background-color: white;
   border-radius: 0px 5px 5px 0px;
   height: 100%;
@@ -26,6 +26,13 @@ exports[`<Starship /> should match snapshot 1`] = `
   align-items: center;
 }
 
+.c0 {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+}
+
 <div>
   <div
     class="row"
@@ -36,9 +43,8 @@ exports[`<Starship /> should match snapshot 1`] = `
       style="padding-right: 0px;"
     >
       <img
-        class=""
+        class="c0"
         src="test imageSrc"
-        style="height: 100%; object-fit: cover; width: 100%; border-radius: 5px 0px 0px 5px;"
       />
     </div>
     <div
@@ -46,10 +52,10 @@ exports[`<Starship /> should match snapshot 1`] = `
       style="padding-left: 0px;"
     >
       <div
-        class="c0"
+        class="c1"
       >
         <h1
-          class="c1"
+          class="c2"
         >
           testname
         </h1>

@@ -12,19 +12,19 @@ const EpisodeSubtitle = styled.h2`
   color: ${(props) => props.theme.text.secondary};
 `;
 
+const HeaderContainer = styled.div`
+  background-color: white;
+  height: 100%;
+  padding-left: 50px;
+  padding-top: 55px;
+  border-radius: 0px 5px 5px 0px;
+`;
+
 const EpisodeHeader = ({ title, subtitle }) => (
-  <div
-    style={{
-      backgroundColor: "white",
-      height: "100%",
-      paddingLeft: "50px",
-      paddingTop: "55px",
-      borderRadius: "0px 5px 5px 0px",
-    }}
-  >
+  <HeaderContainer>
     <EpisodeTitle>{title}</EpisodeTitle>
     <EpisodeSubtitle>{subtitle}</EpisodeSubtitle>
-  </div>
+  </HeaderContainer>
 );
 
 export default EpisodeHeader;

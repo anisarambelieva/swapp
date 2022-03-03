@@ -1,6 +1,27 @@
 import { Image } from "react-bootstrap";
+import styled from "styled-components";
 
 import LabelValuePair from "../../components/labelValuePair.js";
+
+const CharacterImage = styled(Image)`
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 5px;
+`;
+
+const CharacterInfo = styled.div`
+  background-color: white;
+  padding: 10px 30px;
+  margin-left: 15px;
+  border-radius: 5px;
+`;
+
+const CharacterName = styled.h4`
+  text-align: center;
+  color: #4bd5ee;
+  font-weight: bold;
+`;
 
 const CharacterCard = ({
   name,
@@ -10,33 +31,16 @@ const CharacterCard = ({
   species,
   homeWorld,
 }) => (
-  <div
-    style={{
-      backgroundColor: "white",
-      padding: "10px 30px",
-      marginLeft: "15px",
-      borderRadius: "5px",
-    }}
-  >
-    <h4 style={{ textAlign: "center", color: "#4bd5ee", fontWeight: "bold" }}>
-      {name}
-    </h4>
+  <CharacterInfo>
+    <CharacterName>{name}</CharacterName>
 
-    <Image
-      style={{
-        height: "300px",
-        objectFit: "cover",
-        width: "100%",
-        marginBottom: "5px",
-      }}
-      src={imageSrc}
-    />
+    <CharacterImage src={imageSrc} />
 
     <LabelValuePair label="Height" value={height} />
     <LabelValuePair label="Weight" value={weight} />
     <LabelValuePair label="Species" value={species} />
     <LabelValuePair label="Home World" value={homeWorld} />
-  </div>
+  </CharacterInfo>
 );
 
 export default CharacterCard;

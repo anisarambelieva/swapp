@@ -40,6 +40,13 @@ const EPISODE_QUERY = gql`
   }
 `;
 
+const EpisodeImage = styled(Image)`
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+`;
+
 const Episode = () => {
   const { id } = useParams();
 
@@ -87,15 +94,7 @@ const Episode = () => {
             }}
           >
             <Col md="3" style={{ paddingRight: "0" }}>
-              <Image
-                style={{
-                  height: "200px",
-                  objectFit: "cover",
-                  width: "100%",
-                  borderRadius: "5px 0px 0px 5px",
-                }}
-                src={episode.image}
-              />
+              <EpisodeImage src={episode.image} />
             </Col>
 
             <Col

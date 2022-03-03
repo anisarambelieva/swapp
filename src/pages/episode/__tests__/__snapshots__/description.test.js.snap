@@ -1,31 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Description /> should match snapshot 1`] = `
+.c1 {
+  color: #4e5b6e;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c2 {
+  color: #4bd5ee;
+}
+
+.c0 {
+  padding: 10px;
+  background-color: white;
+  color: #4e5b6e;
+  border-radius: 5px;
+}
+
 <div>
   <div
-    style="padding: 10px; background-color: white; color: rgb(78, 91, 110); border-radius: 5px;"
+    class="c0"
   >
     <p>
       openingCrawl test
     </p>
     <p
-      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+      class="c1"
     >
       Director
       : 
       <span
-        style="color: rgb(75, 213, 238);"
+        class="c2"
       >
         director test
       </span>
     </p>
     <p
-      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+      class="c1"
     >
       Release Date
       : 
       <span
-        style="color: rgb(75, 213, 238);"
+        class="c2"
       >
         releaseDate test
       </span>
