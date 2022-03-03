@@ -1,7 +1,9 @@
 import { gql } from "@apollo/client";
 import { MockedProvider } from "@apollo/client/testing";
 import { render, screen } from "@testing-library/react";
+import { ThemeProvider } from "styled-components";
 
+import themes from "../../styles/themes.js";
 import Episodes from "../episodes.js";
 
 const EPISODES_QUERY = gql`
@@ -51,9 +53,11 @@ describe("<Episodes/>", () => {
     ];
 
     const { container } = render(
-      <MockedProvider mocks={mockData}>
-        <Episodes />
-      </MockedProvider>
+      <ThemeProvider theme={themes["light"]}>
+        <MockedProvider mocks={mockData}>
+          <Episodes />
+        </MockedProvider>
+      </ThemeProvider>
     );
 
     await screen.findByText("A New Hope");
