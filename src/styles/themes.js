@@ -1,5 +1,6 @@
 const themes = {
   light: {
+    background: "#FFF",
     text: {
       primary: "#4BD5EE",
       secondary: "#4E5B6E",
