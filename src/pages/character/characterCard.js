@@ -11,7 +11,7 @@ const CharacterImage = styled(Image)`
 `;
 
 const CharacterInfo = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.background};
   padding: 10px 30px;
   margin-left: 15px;
   border-radius: 5px;
@@ -19,7 +19,7 @@ const CharacterInfo = styled.div`
 
 const CharacterName = styled.h4`
   text-align: center;
-  color: #4bd5ee;
+  color: ${(props) => props.theme.text.primary};
   font-weight: bold;
 `;
 
