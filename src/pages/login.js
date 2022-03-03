@@ -33,6 +33,12 @@ const FormCol = styled(Col)`
   justify-content: ${({ $justifyContent = "center" }) => $justifyContent};
 `;
 
+const ErrorMessage = styled.div`
+  padding-right: 15px;
+  color: red;
+  font-weight: bold;
+`;
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -84,15 +90,7 @@ const Login = () => {
           {invalidCredentials ? (
             <FormRow>
               <FormCol md={{ span: 8, offset: 0 }}>
-                <div
-                  style={{
-                    paddingRight: "15px",
-                    color: "red",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Invalid credentials!
-                </div>
+                <ErrorMessage style={{}}>Invalid credentials!</ErrorMessage>
               </FormCol>
             </FormRow>
           ) : null}
