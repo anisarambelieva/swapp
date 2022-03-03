@@ -1,60 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CharacterCard /> should match snapshot 1`] = `
+.c3 {
+  color: #4e5b6e;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c4 {
+  color: #4bd5ee;
+}
+
+.c2 {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.c0 {
+  background-color: white;
+  padding: 10px 30px;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+.c1 {
+  text-align: center;
+  color: #4bd5ee;
+  font-weight: bold;
+}
+
 <div>
   <div
-    style="background-color: white; padding: 10px 30px; margin-left: 15px; border-radius: 5px;"
+    class="c0"
   >
     <h4
-      style="text-align: center; color: rgb(75, 213, 238); font-weight: bold;"
+      class="c1"
     >
       testname
     </h4>
     <img
-      class=""
+      class="c2"
       src="test imageSrc"
-      style="height: 300px; object-fit: cover; width: 100%; margin-bottom: 5px;"
     />
     <p
-      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+      class="c3"
     >
       Height
       : 
       <span
-        style="color: rgb(75, 213, 238);"
+        class="c4"
       >
         test height
       </span>
     </p>
     <p
-      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+      class="c3"
     >
       Weight
       : 
       <span
-        style="color: rgb(75, 213, 238);"
+        class="c4"
       >
         test weight
       </span>
     </p>
     <p
-      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+      class="c3"
     >
       Species
       : 
       <span
-        style="color: rgb(75, 213, 238);"
+        class="c4"
       >
         test species
       </span>
     </p>
     <p
-      style="color: rgb(78, 91, 110); margin: 0px; font-weight: bold;"
+      class="c3"
     >
       Home World
       : 
       <span
-        style="color: rgb(75, 213, 238);"
+        class="c4"
       >
         test home world
       </span>
