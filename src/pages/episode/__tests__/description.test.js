@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
-import themes from "../../../styles/themes.js";
 
+import themes from "../../../styles/themes.js";
 import Description from "../description.js";
 
 describe("<Description />", () => {
