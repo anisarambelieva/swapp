@@ -40,13 +40,13 @@ export const CHARACTER_QUERY = gql`
 
 const CharacterName = styled.h3`
   text-align: center;
-  color: #4bd5ee;
+  color: ${(props) => props.theme.text.primary};
   font-weight: bold;
 `;
 
 const StarshipsHeading = styled.h3`
   text-align: center;
-  color: #3c4858;
+  color: ${(props) => props.theme.text.secondary};
   font-weight: bold;
 `;
 
