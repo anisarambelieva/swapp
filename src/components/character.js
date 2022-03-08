@@ -8,7 +8,7 @@ const CharacterName = styled.h1`
   justify-content: center;
   font-size: 20px;
   font-weight: bold;
-  color: #4bd5ee;
+  color: ${(props) => props.theme.text.primary};
   height: 100%;
   align-items: center;
   border-radius: 0px 5px 5px 0px;
