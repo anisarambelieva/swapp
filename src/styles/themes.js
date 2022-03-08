@@ -1,6 +1,6 @@
 const themes = {
   light: {
-    background: "#FFF",
+    background: "#E8EAED",
     header: "#000",
     containers: {
       background: "#FFF",
