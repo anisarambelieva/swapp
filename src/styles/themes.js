@@ -16,6 +16,24 @@ const themes = {
       },
     },
   },
+  dark: {
+    background: "#333",
+    text: {
+      primary: "#FFE300",
+      secondary: "#4BD5EE",
+      description: " #ABB1BA",
+    },
+    button: {
+      primary: {
+        bg: "#4BD5EE",
+        text: "#FFE300",
+      },
+      secondary: {
+        bg: "#3C4858",
+        text: "#4BD5EE",
+      },
+    },
+  },
 };
 
 export default themes;
