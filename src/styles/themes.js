@@ -4,6 +4,7 @@ const themes = {
     text: {
       primary: "#4BD5EE",
       secondary: "#4E5B6E",
+      description: " #4E5B6E",
     },
     button: {
       primary: {
