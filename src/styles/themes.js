@@ -2,6 +2,9 @@ const themes = {
   light: {
     background: "#FFF",
     header: "#000",
+    containers: {
+      background: "#FFF",
+    },
     text: {
       primary: "#4BD5EE",
       secondary: "#4E5B6E",
@@ -19,8 +22,11 @@ const themes = {
     },
   },
   dark: {
-    background: "#333",
+    background: "#000",
     header: "#333",
+    containers: {
+      background: "#333",
+    },
     text: {
       primary: "#FFE300",
       secondary: "#4BD5EE",
