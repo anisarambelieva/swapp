@@ -11,7 +11,7 @@ const CharacterImage = styled(Image)`
 `;
 
 const CharacterInfo = styled.div`
-  background-color: ${(props) => props.theme.background};
+  background-color: ${(props) => props.theme.containers.background};
   padding: 10px 30px;
   margin-left: 15px;
   border-radius: 5px;
