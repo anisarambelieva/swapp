@@ -13,7 +13,7 @@ const EpisodeSubtitle = styled.h2`
 `;
 
 const HeaderContainer = styled.div`
-  background-color: ${(props) => props.theme.background};
+  background-color: ${(props) => props.theme.containers.background};
   height: 100%;
   padding-left: 50px;
   padding-top: 55px;

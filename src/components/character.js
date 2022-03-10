@@ -12,6 +12,7 @@ const CharacterName = styled.h1`
   height: 100%;
   align-items: center;
   border-radius: 0px 5px 5px 0px;
+  background-color: ${(props) => props.theme.containers.background};
 `;
 
 const CharacterImage = styled(Image)`

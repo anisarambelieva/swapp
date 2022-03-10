@@ -43,7 +43,7 @@ exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
 
 .c0 {
   height: 70px;
-  background-color: black;
+  background-color: #000;
   color: white;
   -webkit-align-items: center;
   -webkit-box-align: center;

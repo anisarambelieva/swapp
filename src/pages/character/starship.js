@@ -9,7 +9,7 @@ const Name = styled.h1`
 `;
 
 const NameContainer = styled.div`
-  background-color: ${(props) => props.theme.background};
+  background-color: ${(props) => props.theme.containers.background};
   border-radius: 0px 5px 5px 0px;
   height: 100%;
   display: flex;

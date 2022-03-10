@@ -8,7 +8,7 @@ import Logo from "./logo.js";
 
 const HeaderContainer = styled(Row)`
   height: 70px;
-  background-color: black;
+  background-color: ${(props) => props.theme.header};
   color: white;
   align-items: center;
 `;

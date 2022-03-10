@@ -20,6 +20,7 @@ exports[`<Characters/> should render Characters page with correct styles 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 0px 5px 5px 0px;
+  background-color: #FFF;
 }
 
 .c7 {
@@ -51,7 +52,7 @@ exports[`<Characters/> should render Characters page with correct styles 1`] = `
 
 .c0 {
   height: 70px;
-  background-color: black;
+  background-color: #000;
   color: white;
   -webkit-align-items: center;
   -webkit-box-align: center;

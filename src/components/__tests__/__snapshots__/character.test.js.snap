@@ -20,6 +20,7 @@ exports[`<Character /> should match snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 0px 5px 5px 0px;
+  background-color: #FFF;
 }
 
 .c0 {
