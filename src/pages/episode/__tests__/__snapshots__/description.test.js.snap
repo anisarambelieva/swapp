@@ -14,7 +14,7 @@ exports[`<Description /> should match snapshot 1`] = `
 .c0 {
   padding: 10px;
   background-color: #FFF;
-  color: #4e5b6e;
+  color: #4E5B6E;
   border-radius: 5px;
 }
 
