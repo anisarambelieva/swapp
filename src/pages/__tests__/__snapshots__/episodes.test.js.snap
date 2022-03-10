@@ -2,7 +2,7 @@
 
 exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
 .c8 {
-  color: #4bd5ee;
+  color: #4BD5EE;
   font-weight: bold;
   font-size: 25px;
 }
@@ -11,6 +11,7 @@ exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
   width: 20rem;
   border-radius: 10px;
   overflow: hidden;
+  background-color: #FFF;
 }
 
 .c9 {
@@ -19,6 +20,7 @@ exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
   display: -webkit-box;
   -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
+  color: #4E5B6E;
 }
 
 .c5 {

@@ -2,7 +2,7 @@ import { Card } from "react-bootstrap";
 import styled from "styled-components";
 
 const CardTitle = styled(Card.Title)`
-  color: #4bd5ee;
+  color: ${(props) => props.theme.text.primary};
   font-weight: bold;
   font-size: 25px;
 `;
@@ -11,6 +11,7 @@ const StyledCard = styled(Card)`
   width: 20rem;
   border-radius: 10px;
   overflow: hidden;
+  background-color: ${(props) => props.theme.containers.background};
 `;
 
 const TruncatedText = styled(Card.Text)`
@@ -19,6 +20,7 @@ const TruncatedText = styled(Card.Text)`
   display: -webkit-box;
   -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
+  color: ${(props) => props.theme.text.description};
 `;
 
 const EpisodeCard = ({ src, title, openingCrawl }) => (
