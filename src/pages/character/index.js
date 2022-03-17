@@ -63,7 +63,6 @@ const Character = () => {
   if (error) {
     return (
       <Container>
-        <Header />
         <div>Something's wrong!</div>
       </Container>
     );
@@ -72,7 +71,6 @@ const Character = () => {
   if (loading) {
     return (
       <Container>
-        <Header />
         <div>Loading</div>
       </Container>
     );
@@ -82,8 +80,6 @@ const Character = () => {
 
   return (
     <Container>
-      <Header />
-
       <Row
         style={{
           display: "flex",

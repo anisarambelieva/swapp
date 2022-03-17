@@ -35,7 +35,6 @@ const Characters = () => {
   if (error) {
     return (
       <Container>
-        <Header />
         <div>Something's wrong!</div>
       </Container>
     );
@@ -44,7 +43,6 @@ const Characters = () => {
   if (loading) {
     return (
       <Container>
-        <Header />
         <div>Loading</div>
       </Container>
     );
@@ -54,8 +52,6 @@ const Characters = () => {
 
   return (
     <Container>
-      <Header />
-
       <Row>
         {allPeople.edges.map((edge) => (
           <CharacterColumn key={edge.node.id} md="4">

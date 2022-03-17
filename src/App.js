@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
 import client from "./client/index.js";
+import Header from "./components/header.js";
 import Character from "./pages/character/index.js";
 import Characters from "./pages/characters.js";
 import Episode from "./pages/episode/index.js";
@@ -29,26 +30,32 @@ const App = () => {
             </Route>
 
             <ProtectedRoute path="/episodes">
+              <Header />
               <Episodes />
             </ProtectedRoute>
 
             <ProtectedRoute path="/episode/:id">
+              <Header />
               <Episode />
             </ProtectedRoute>
 
             <ProtectedRoute path="/characters/:id">
+              <Header />
               <Character />
             </ProtectedRoute>
 
             <ProtectedRoute path="/characters">
+              <Header />
               <Characters />
             </ProtectedRoute>
 
             <ProtectedRoute path="/starships/:id">
+              <Header />
               <Starship />
             </ProtectedRoute>
 
             <ProtectedRoute path="/">
+              <Header />
               <Episodes />
             </ProtectedRoute>
           </Switch>

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 
 import Button from "./button.js";
 import Logo from "./logo.js";
 
-const HeaderContainer = styled(Row)`
+const HeaderRow = styled(Row)`
   height: 70px;
   background-color: ${(props) => props.theme.header};
   color: white;
@@ -48,33 +48,35 @@ const Header = () => {
   return loggedOut ? (
     <Redirect push to="/login" />
   ) : (
-    <HeaderContainer>
-      <Col md="3">
-        <Logo $fontSize="26px">SWAPP</Logo>
-      </Col>
+    <Container>
+      <HeaderRow>
+        <Col md="3">
+          <Logo $fontSize="26px">SWAPP</Logo>
+        </Col>
 
-      <Col style={{ justifyContent: "flex-end", display: "flex" }}>
-        <Navigation>
-          <ListItem>
-            <Link href="/episodes">Episodes</Link>
-          </ListItem>
+        <Col style={{ justifyContent: "flex-end", display: "flex" }}>
+          <Navigation>
+            <ListItem>
+              <Link href="/episodes">Episodes</Link>
+            </ListItem>
 
-          <ListItem>
-            <Link href="/characters">Characters</Link>
-          </ListItem>
+            <ListItem>
+              <Link href="/characters">Characters</Link>
+            </ListItem>
 
-          <ListItem>
-            <Button
-              $color="#4bd5ee"
-              $backgroundColor="#fff"
-              onClick={handleLogout}
-            >
-              Logout
-            </Button>
-          </ListItem>
-        </Navigation>
-      </Col>
-    </HeaderContainer>
+            <ListItem>
+              <Button
+                $color="#4bd5ee"
+                $backgroundColor="#fff"
+                onClick={handleLogout}
+              >
+                Logout
+              </Button>
+            </ListItem>
+          </Navigation>
+        </Col>
+      </HeaderRow>
+    </Container>
   );
 };
 
