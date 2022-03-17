@@ -25,7 +25,7 @@ const StarshipImage = styled(Image)`
 `;
 
 const Starship = ({ imageSrc, name }) => (
-  <Row style={{ margin: "10px 0px 0px 0px", height: "70px" }}>
+  <Row style={{ margin: "10px", height: "100px" }}>
     <Col md="3" style={{ paddingRight: "0" }}>
       <StarshipImage src={imageSrc} />
     </Col>
