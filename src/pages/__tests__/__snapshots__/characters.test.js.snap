@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Characters/> should render Characters page with correct styles 1`] = `
-.c8 {
+.c2 {
   background-color: white;
   display: -webkit-box;
   display: -webkit-flex;
@@ -23,71 +23,14 @@ exports[`<Characters/> should render Characters page with correct styles 1`] = `
   background-color: #FFF;
 }
 
-.c7 {
+.c1 {
   height: 100px;
   object-fit: cover;
   width: 100%;
   border-radius: 5px 0px 0px 5px;
 }
 
-.c5 {
-  font-weight: bold;
-  color: #4bd5ee;
-  background-color: #fff;
-  border: 0;
-}
-
-.c5:hover {
-  color: #fff;
-  background-color: #4bd5ee;
-}
-
-.c1 {
-  font-family: starWarsFont;
-  font-size: 26px;
-  color: #FFE300;
-  margin: 0;
-  padding-top: 0.2em;
-}
-
 .c0 {
-  height: 70px;
-  background-color: #000;
-  color: white;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 {
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-}
-
-.c3 {
-  padding: 0 10px;
-}
-
-.c3:last-of-type {
-  padding-right: 0;
-}
-
-.c4 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #4bd5ee;
-}
-
-.c6 {
   margin-top: 30px;
 }
 
@@ -96,62 +39,10 @@ exports[`<Characters/> should render Characters page with correct styles 1`] = `
     class="container"
   >
     <div
-      class="c0 row"
-    >
-      <div
-        class="col-md-3"
-      >
-        <h1
-          class="c1"
-        >
-          SWAPP
-        </h1>
-      </div>
-      <div
-        class="col"
-        style="justify-content: flex-end; display: flex;"
-      >
-        <ul
-          class="c2"
-        >
-          <li
-            class="c3"
-          >
-            <a
-              class="c4"
-              href="/episodes"
-            >
-              Episodes
-            </a>
-          </li>
-          <li
-            class="c3"
-          >
-            <a
-              class="c4"
-              href="/characters"
-            >
-              Characters
-            </a>
-          </li>
-          <li
-            class="c3"
-          >
-            <button
-              class="c5 btn btn-primary"
-              type="button"
-            >
-              Logout
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div
       class="row"
     >
       <div
-        class="c6 col-md-4"
+        class="c0 col-md-4"
       >
         <div
           class="row"
@@ -161,7 +52,7 @@ exports[`<Characters/> should render Characters page with correct styles 1`] = `
             style="padding-right: 0px;"
           >
             <img
-              class="c7"
+              class="c1"
               src="https://www.nme.com/wp-content/uploads/2021/01/markhamill-lukeskywalker-2000x1270-1.jpg"
             />
           </div>
@@ -170,7 +61,7 @@ exports[`<Characters/> should render Characters page with correct styles 1`] = `
             style="height: 100px; padding-left: 0px;"
           >
             <h1
-              class="c8"
+              class="c2"
             >
               Luke Skywalker
             </h1>

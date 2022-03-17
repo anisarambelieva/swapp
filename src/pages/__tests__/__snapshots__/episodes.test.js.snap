@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
-.c8 {
+.c2 {
   color: #4BD5EE;
   font-weight: bold;
   font-size: 25px;
 }
 
-.c7 {
+.c1 {
   width: 20rem;
   border-radius: 10px;
   overflow: hidden;
   background-color: #FFF;
 }
 
-.c9 {
+.c3 {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -23,64 +23,7 @@ exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
   color: #4E5B6E;
 }
 
-.c5 {
-  font-weight: bold;
-  color: #4bd5ee;
-  background-color: #fff;
-  border: 0;
-}
-
-.c5:hover {
-  color: #fff;
-  background-color: #4bd5ee;
-}
-
-.c1 {
-  font-family: starWarsFont;
-  font-size: 26px;
-  color: #FFE300;
-  margin: 0;
-  padding-top: 0.2em;
-}
-
 .c0 {
-  height: 70px;
-  background-color: #000;
-  color: white;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 {
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-}
-
-.c3 {
-  padding: 0 10px;
-}
-
-.c3:last-of-type {
-  padding-right: 0;
-}
-
-.c4 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #4bd5ee;
-}
-
-.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,66 +40,14 @@ exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
     class="container"
   >
     <div
-      class="c0 row"
-    >
-      <div
-        class="col-md-3"
-      >
-        <h1
-          class="c1"
-        >
-          SWAPP
-        </h1>
-      </div>
-      <div
-        class="col"
-        style="justify-content: flex-end; display: flex;"
-      >
-        <ul
-          class="c2"
-        >
-          <li
-            class="c3"
-          >
-            <a
-              class="c4"
-              href="/episodes"
-            >
-              Episodes
-            </a>
-          </li>
-          <li
-            class="c3"
-          >
-            <a
-              class="c4"
-              href="/characters"
-            >
-              Characters
-            </a>
-          </li>
-          <li
-            class="c3"
-          >
-            <button
-              class="c5 btn btn-primary"
-              type="button"
-            >
-              Logout
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div
       class="row"
       style="padding-bottom: 30px;"
     >
       <div
-        class="c6 col-md-4"
+        class="c0 col-md-4"
       >
         <div
-          class="c7 card"
+          class="c1 card"
         >
           <img
             class="card-img"
@@ -167,12 +58,12 @@ exports[`<Episodes/> should render Episodes page with correct styles 1`] = `
             class="card-body"
           >
             <div
-              class="c8 card-title h5"
+              class="c2 card-title h5"
             >
               A New Hope
             </div>
             <p
-              class="c9 card-text"
+              class="c3 card-text"
             >
               It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire's sinister agents, Princess Leia
             </p>
