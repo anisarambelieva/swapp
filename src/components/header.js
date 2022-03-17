@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 
@@ -48,33 +48,35 @@ const Header = () => {
   return loggedOut ? (
     <Redirect push to="/login" />
   ) : (
-    <HeaderRow>
-      <Col md="3">
-        <Logo $fontSize="26px">SWAPP</Logo>
-      </Col>
+    <Container>
+      <HeaderRow>
+        <Col md="3">
+          <Logo $fontSize="26px">SWAPP</Logo>
+        </Col>
 
-      <Col style={{ justifyContent: "flex-end", display: "flex" }}>
-        <Navigation>
-          <ListItem>
-            <Link href="/episodes">Episodes</Link>
-          </ListItem>
+        <Col style={{ justifyContent: "flex-end", display: "flex" }}>
+          <Navigation>
+            <ListItem>
+              <Link href="/episodes">Episodes</Link>
+            </ListItem>
 
-          <ListItem>
-            <Link href="/characters">Characters</Link>
-          </ListItem>
+            <ListItem>
+              <Link href="/characters">Characters</Link>
+            </ListItem>
 
-          <ListItem>
-            <Button
-              $color="#4bd5ee"
-              $backgroundColor="#fff"
-              onClick={handleLogout}
-            >
-              Logout
-            </Button>
-          </ListItem>
-        </Navigation>
-      </Col>
-    </HeaderRow>
+            <ListItem>
+              <Button
+                $color="#4bd5ee"
+                $backgroundColor="#fff"
+                onClick={handleLogout}
+              >
+                Logout
+              </Button>
+            </ListItem>
+          </Navigation>
+        </Col>
+      </HeaderRow>
+    </Container>
   );
 };
 
