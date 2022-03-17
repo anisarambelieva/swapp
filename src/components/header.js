@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Button from "./button.js";
 import Logo from "./logo.js";
 
-const HeaderContainer = styled(Row)`
+const HeaderRow = styled(Row)`
   height: 70px;
   background-color: ${(props) => props.theme.header};
   color: white;
@@ -48,7 +48,7 @@ const Header = () => {
   return loggedOut ? (
     <Redirect push to="/login" />
   ) : (
-    <HeaderContainer>
+    <HeaderRow>
       <Col md="3">
         <Logo $fontSize="26px">SWAPP</Logo>
       </Col>
@@ -74,7 +74,7 @@ const Header = () => {
           </ListItem>
         </Navigation>
       </Col>
-    </HeaderContainer>
+    </HeaderRow>
   );
 };
 
