@@ -60,7 +60,6 @@ const Episode = () => {
   if (error) {
     return (
       <Container>
-        <Header />
         <div>Something's wrong!</div>
       </Container>
     );
@@ -69,7 +68,6 @@ const Episode = () => {
   if (loading) {
     return (
       <Container>
-        <Header />
         <div>Loading</div>
       </Container>
     );
@@ -79,8 +77,6 @@ const Episode = () => {
 
   return (
     <Container>
-      <Header />
-
       <Row
         style={{
           display: "flex",

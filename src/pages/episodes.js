@@ -43,7 +43,6 @@ const Episodes = () => {
   if (error) {
     return (
       <Container>
-        <Header />
         <div>Something's wrong!</div>
       </Container>
     );
@@ -52,7 +51,6 @@ const Episodes = () => {
   if (loading) {
     return (
       <Container>
-        <Header />
         <div>Loading</div>
       </Container>
     );
@@ -62,8 +60,6 @@ const Episodes = () => {
 
   return (
     <Container>
-      <Header />
-
       <Row style={{ paddingBottom: "30px" }}>
         {allEpisodes.edges.map(({ node }) => (
           <CardColumn key={node.id} md="4" onClick={() => handleClick(node.id)}>
