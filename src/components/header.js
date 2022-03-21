@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import Button from "./button.js";
 import Logo from "./logo.js";
+import ThemeButton from "./themeButton.js";
 
 const HeaderRow = styled(Row)`
   height: 70px;
@@ -33,7 +34,7 @@ const Link = styled.a`
   color: #4bd5ee;
 `;
 
-const Header = () => {
+const Header = ({ theme, setTheme }) => {
   const [loggedOut, setLoggedOut] = useState(false);
 
   const handleLogout = () => {
@@ -62,6 +63,10 @@ const Header = () => {
 
             <ListItem>
               <Link href="/characters">Characters</Link>
+            </ListItem>
+
+            <ListItem>
+              <ThemeButton theme={theme} onClick={setTheme} />
             </ListItem>
 
             <ListItem>

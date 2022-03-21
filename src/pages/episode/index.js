@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 import Button from "../../components/button.js";
 import Character from "../../components/character.js";
-import Header from "../../components/header.js";
 
 import Description from "./description.js";
 import EpisodeHeader from "./header.js";

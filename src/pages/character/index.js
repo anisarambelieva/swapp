@@ -3,8 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import Header from "../../components/header.js";
-
 import CharacterCard from "./characterCard.js";
 import Starship from "./starship.js";
 
