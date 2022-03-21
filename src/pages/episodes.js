@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 import EpisodeCard from "../components/episodeCard.js";
-import Header from "../components/header.js";
 
 const CardColumn = styled(Col)`
   display: flex;
