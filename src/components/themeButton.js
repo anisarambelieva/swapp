@@ -11,9 +11,11 @@ const ThemeButton = ({ theme, onClick }) => {
     if (theme === "light") {
       onClick("dark");
       setImage(Sun);
+      localStorage.setItem("theme", "dark");
     } else {
       onClick("light");
       setImage(Moon);
+      localStorage.setItem("theme", "light");
     }
   };
 
