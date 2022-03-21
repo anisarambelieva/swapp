@@ -17,7 +17,13 @@ const ThemeButton = ({ theme, onClick }) => {
     }
   };
 
-  return <Image src={image} style={{ height: "30px" }} onClick={toggleTheme} />;
+  return (
+    <Image
+      src={image}
+      style={{ height: "30px", cursor: "pointer" }}
+      onClick={toggleTheme}
+    />
+  );
 };
 
 export default ThemeButton;
