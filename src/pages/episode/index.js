@@ -3,7 +3,6 @@ import { Col, Container, Row, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import Button from "../../components/button.js";
 import Character from "../../components/character.js";
 
 import Description from "./description.js";
@@ -136,20 +135,6 @@ const Episode = () => {
                 )}
               </CharacterColumn>
             ))}
-          </Row>
-
-          <Row>
-            <Col
-              style={{
-                marginTop: "30px",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Button $color="#ffe300" $backgroundColor="black">
-                Load More
-              </Button>
-            </Col>
           </Row>
         </Col>
       </Row>
