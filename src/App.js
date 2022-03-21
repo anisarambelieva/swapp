@@ -18,7 +18,7 @@ import "./styles/App.css";
 import themes from "./styles/themes.js";
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   return (
     <ThemeProvider theme={themes[theme]}>
