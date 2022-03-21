@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import Button from "./button.js";
 import Logo from "./logo.js";
+import ThemeButton from "./themeButton.js";
 
 const HeaderRow = styled(Row)`
   height: 70px;
@@ -62,6 +63,10 @@ const Header = () => {
 
             <ListItem>
               <Link href="/characters">Characters</Link>
+            </ListItem>
+
+            <ListItem>
+              <ThemeButton />
             </ListItem>
 
             <ListItem>
