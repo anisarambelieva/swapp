@@ -30,32 +30,32 @@ const App = () => {
             </Route>
 
             <ProtectedRoute path="/episodes">
-              <Header setTheme={setTheme} />
+              <Header theme={theme} setTheme={setTheme} />
               <Episodes />
             </ProtectedRoute>
 
             <ProtectedRoute path="/episode/:id">
-              <Header setTheme={setTheme} />
+              <Header theme={theme} setTheme={setTheme} />
               <Episode />
             </ProtectedRoute>
 
             <ProtectedRoute path="/characters/:id">
-              <Header setTheme={setTheme} />
+              <Header theme={theme} setTheme={setTheme} />
               <Character />
             </ProtectedRoute>
 
             <ProtectedRoute path="/characters">
-              <Header setTheme={setTheme} />
+              <Header theme={theme} setTheme={setTheme} />
               <Characters />
             </ProtectedRoute>
 
             <ProtectedRoute path="/starships/:id">
-              <Header setTheme={setTheme} />
+              <Header theme={theme} setTheme={setTheme} />
               <Starship />
             </ProtectedRoute>
 
             <ProtectedRoute path="/">
-              <Header setTheme={setTheme} />
+              <Header theme={theme} setTheme={setTheme} />
               <Episodes />
             </ProtectedRoute>
           </Switch>

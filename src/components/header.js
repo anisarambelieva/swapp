@@ -34,7 +34,7 @@ const Link = styled.a`
   color: #4bd5ee;
 `;
 
-const Header = ({ setTheme }) => {
+const Header = ({ theme, setTheme }) => {
   const [loggedOut, setLoggedOut] = useState(false);
 
   const handleLogout = () => {
@@ -66,7 +66,7 @@ const Header = ({ setTheme }) => {
             </ListItem>
 
             <ListItem>
-              <ThemeButton onClick={setTheme} />
+              <ThemeButton theme={theme} onClick={setTheme} />
             </ListItem>
 
             <ListItem>
